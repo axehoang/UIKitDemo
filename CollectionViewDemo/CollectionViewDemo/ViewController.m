@@ -38,7 +38,10 @@
 
 #pragma mark UICollectionViewDelegate && UICollectionViewDataSource
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    NSString *imageURL = [images objectAtIndex:indexPath.row];
+    ImageShowingViewController *imageShowingVC = [ImageShowingViewController new];
+    imageShowingVC.imageURL = imageURL;
+    [self presentViewController:imageShowingVC animated:YES completion:nil];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -70,5 +73,27 @@
     
 }
 
+@end
+
+
+@implementation ImageShowingViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    imageView.image = [UIImage imageNamed:_imageURL];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.layer.masksToBounds = YES;
+    [self.view addSubview:imageView];
+    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    closeButton.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+    [closeButton setImage:[UIImage imageNamed:@"ic_close"] forState:UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:closeButton];
+}
+
+- (void)close:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

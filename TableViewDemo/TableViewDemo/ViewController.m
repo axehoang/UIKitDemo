@@ -32,7 +32,14 @@
 
 #pragma mark UITableViewDelegate && UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    if(indexPath.row == 0){
+        
+    }else{
+        Image *image = [images objectAtIndex:indexPath.row - 1];
+        ImageShowingViewController *imageShowingVC = [ImageShowingViewController new];
+        imageShowingVC.image = image;
+        [self presentViewController:imageShowingVC animated:YES completion:nil];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -108,6 +115,27 @@
 - (void)setImage:(Image *)image{
     imageView.image = [UIImage imageNamed:image.imageURL];
     label.text = image.imageName;
+}
+@end
+
+@implementation ImageShowingViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    imageView.image = [UIImage imageNamed:_image.imageURL];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.layer.masksToBounds = YES;
+    [self.view addSubview:imageView];
+    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    closeButton.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+    [closeButton setImage:[UIImage imageNamed:@"ic_close"] forState:UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:closeButton];
+}
+
+- (void)close:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

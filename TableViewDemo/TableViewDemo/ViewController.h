@@ -16,3 +16,7 @@
 @interface TableViewCellDemo : UITableViewCell
 @property (nonatomic, strong) Image *image;
 @end
+
+@interface ImageShowingViewController : UIViewController
+@property (strong, nonatomic) Image *image;
+@end

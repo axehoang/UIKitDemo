@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
 
-
 @end
 
+@interface ImageShowingViewController : UIViewController
+@property (strong, nonatomic) NSString *imageURL;
+@end
