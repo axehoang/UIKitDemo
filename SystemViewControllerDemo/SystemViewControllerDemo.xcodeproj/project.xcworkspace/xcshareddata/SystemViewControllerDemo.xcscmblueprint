@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F9F37CC230E5141929BC81E1D46ECE9F9C881B94",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1030FADC9F767F6C951B7A63636CF81E455CB8EC" : 9223372036854775807,
+    "F9F37CC230E5141929BC81E1D46ECE9F9C881B94" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C9CC1FAE-82E6-4ADC-B2E9-2B2CC49E396B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1030FADC9F767F6C951B7A63636CF81E455CB8EC" : "",
+    "F9F37CC230E5141929BC81E1D46ECE9F9C881B94" : "UIKitDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SystemViewControllerDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SystemViewControllerDemo\/SystemViewControllerDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/axehoang\/OOPExample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1030FADC9F767F6C951B7A63636CF81E455CB8EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/axehoang\/UIKitDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F9F37CC230E5141929BC81E1D46ECE9F9C881B94"
+    }
+  ]
+}

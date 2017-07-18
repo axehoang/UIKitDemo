@@ -6,7 +6,7 @@
 //  Copyright © 2017 Axe. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ControlsViewController.h"
 #define images @[@"moon0",@"moon1",@"moon2",@"moon3",@"moon4"]
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -22,7 +22,7 @@ typedef enum : NSUInteger {
 
 const NSUInteger numberOfImages = 5;
 
-@interface ViewController ()
+@interface ControlsViewController ()
 
 @property (strong, nonatomic) UISegmentedControl *segmentedControl;
 //@property (strong, nonatomic) UIButton *previousButton, *nextButton;
@@ -35,7 +35,7 @@ const NSUInteger numberOfImages = 5;
 @property (strong, nonatomic) UIScrollView *imageScrollView;
 @end
 
-@implementation ViewController{
+@implementation ControlsViewController{
     NSInteger selectedImageIndex;
 }
 
@@ -126,6 +126,7 @@ const NSUInteger numberOfImages = 5;
     [controlView addSubview:_switcher];
     
     [self showControlView:Button];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)sliderValueChange: (id)sender{
